@@ -1,10 +1,15 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        set<int>s(nums.begin(), nums.end());
-        for(auto x : s) cout<<x<<" ";
-        vector<int>v(s.begin(),s.end());
-        nums=v;
-        return s.size();
+       map<int,int>m;
+       for(int x:nums){
+           m[x]++;
+       } 
+       vector<int>v1;
+        for(auto x:m){
+         v1.push_back(x.first);
+        }
+        nums=v1;
+       return m.size();
     }
 };
