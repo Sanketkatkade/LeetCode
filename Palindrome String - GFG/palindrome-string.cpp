@@ -6,26 +6,27 @@ using namespace std;
 
 // } Driver Code Ends
 //User function template for C++
+
 class Solution{
 public:	
 	
 	
 	int isPalindrome(string S)
 	{
-	    // Your code goes here
-	    int s = 0;
-	    int n = S.size()-1;
-	   while (s < n) { 
-            if (S[s] != S[n]) {
-                return 0;
+	    int start = 0;
+	    int end = S.size()-1;
+	    while(start <= end){
+	        if(S[start] != S[end]){
+	            return 0;
 	        }
-	        s++;
-	        n--;
+	        start++;
+	        end--;
 	    }
 	    return 1;
 	}
 
 };
+
 
 //{ Driver Code Starts.
 
